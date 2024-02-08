@@ -15,9 +15,10 @@ use App\Http\Controllers\CategoryController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
+Route::get('/', [StaffController::class, 'home']);
 Route::get('/home', [StaffController::class, 'home']);
 
 Route::get('/create-staff', [StaffController::class, 'createStaff']);
